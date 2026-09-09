@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: songsaurus
+
+sp:
+  clientId: test
+  bearerToken: BQD1dxSvOlQ40gH65WZpBIwnzaj6Fl1xgw2o5dQXI4GKOKNQ0yQt8IdHMThCagwRhz5iyfpHxZnVOnVdlgEe4pbmaOZ_0ZScttuK_DFOmGYWokStiZE5MQ4LH8WVRtSoqI9-o9665krz
+  refreshToken:
+
+  urls:
+    search: https://api.spotify.com/v1/search
