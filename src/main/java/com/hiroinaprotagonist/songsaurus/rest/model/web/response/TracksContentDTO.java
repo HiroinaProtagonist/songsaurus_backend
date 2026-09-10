@@ -1,7 +1,7 @@
-package com.hiroinaprotagonist.songsaurus.rest.model;
+package com.hiroinaprotagonist.songsaurus.rest.model.web.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.hiroinaprotagonist.songsaurus.rest.model.trackObject.TrackObjectDTO;
+import com.hiroinaprotagonist.songsaurus.rest.model.web.response.trackObject.TrackObjectDTO;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record TracksContentDTO(String href,

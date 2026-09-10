@@ -1,4 +1,4 @@
-package com.hiroinaprotagonist.songsaurus.rest.model;
+package com.hiroinaprotagonist.songsaurus.rest.model.pokemon;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

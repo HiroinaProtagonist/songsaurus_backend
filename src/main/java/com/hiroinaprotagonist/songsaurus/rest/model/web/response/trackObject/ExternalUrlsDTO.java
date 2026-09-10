@@ -1,4 +1,4 @@
-package com.hiroinaprotagonist.songsaurus.rest.model.trackObject;
+package com.hiroinaprotagonist.songsaurus.rest.model.web.response.trackObject;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

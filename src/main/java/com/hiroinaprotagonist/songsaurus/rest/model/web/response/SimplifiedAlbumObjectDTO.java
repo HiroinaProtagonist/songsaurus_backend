@@ -1,7 +1,7 @@
-package com.hiroinaprotagonist.songsaurus.rest.model;
+package com.hiroinaprotagonist.songsaurus.rest.model.web.response;
 
-import com.hiroinaprotagonist.songsaurus.rest.model.trackObject.ImageObjectDTO;
-import com.hiroinaprotagonist.songsaurus.rest.model.trackObject.SimplifiedArtistObjectDTO;
+import com.hiroinaprotagonist.songsaurus.rest.model.web.response.trackObject.ImageObjectDTO;
+import com.hiroinaprotagonist.songsaurus.rest.model.web.response.trackObject.SimplifiedArtistObjectDTO;
 
 public record SimplifiedAlbumObjectDTO(
         String album_type,
