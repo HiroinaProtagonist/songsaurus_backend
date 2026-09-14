@@ -1,6 +1,5 @@
 package com.hiroinaprotagonist.songsaurus.rest.service;
 
-import com.hiroinaprotagonist.songsaurus.rest.model.pokemon.Pokemon;
 import com.hiroinaprotagonist.songsaurus.rest.model.web.response.TracksDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +28,6 @@ public class SpService {
     @Value("${sp.bearerToken}")
     private String bearerToken;
 
-    private static String currentBearerToken;
-
     @Value("${sp.refreshToken}")
     private String refreshToken;
 
@@ -51,7 +48,7 @@ public class SpService {
         String query = String.format("%s?q=%s&type=track&limit=%d",
                 spotifyWebApiSearchUrl, word, limitValue);
 
-        return callSpotifySearch(query, token);
+        return callSpotifySearch(word, query, token);
     }
 
     @Cacheable(value = "songsByWord", key="#word")
@@ -85,9 +82,6 @@ public class SpService {
             return new LinkedList<>();
         }
 
-
-
-
         //call api for each word
         return null;
     }
@@ -99,14 +93,14 @@ public class SpService {
                     headers.setBearerAuth(bearerToken);
                 })
                 .retrieve()
-                .toEntity(new ParameterizedTypeReference<TracksDTO>() {});
+                .toEntity(new ParameterizedTypeReference<>() {});
 
         log.info("Response: {}", response);
 
         return response.getBody();
     }
 
-    private TracksDTO callSpotifySearch(String query, String token) {
+    private TracksDTO callSpotifySearch(String word, String query, String token) {
         ResponseEntity<TracksDTO> response = restClient.get()
                 .uri(query)
                 .headers(headers -> {

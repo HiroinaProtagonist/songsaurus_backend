@@ -11,6 +11,4 @@ public record TracksContentDTO(String href,
                                String previous,
                                Integer total,
                                TrackObjectDTO[] items
-)
-{}
-
+) {}
