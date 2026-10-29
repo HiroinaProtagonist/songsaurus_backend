@@ -28,16 +28,20 @@ public class SongsaurusApplication implements CommandLineRunner {
 		this.spController = spController;
 	}
 
-//	@Override
 	public void run(String... args) throws Exception {
 		String[] sampleCloud = {"rainy", "cloudy"};
+		String[] expCloud = {"Milkshake", "Cash"};
+
 //				new Cloud((new CloudWord[]{
 //				new CloudWord("rainy", 500),
 //				new CloudWord("cloudy", 700),
 //				new CloudWord("dry", 1200)}));
-//		ResponseEntity<List<Tracks>> res = spController.getSongsByWords("5", sampleCloud);
+
+//		ResponseEntity<List<Tracks>> res = spController.getSongsByWords("5",
+////				sampleCloud);
+//				expCloud);
 //		log.info("Res from controller: {}", res);
 
-//		spController.getSongsByWord("5", sampleCloud[0]);
+//		spController.getSongsByWord("5", expCloud[0]);
 	}
 }

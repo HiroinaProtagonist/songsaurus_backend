@@ -65,6 +65,8 @@ public class SpController {
     public ResponseEntity<List<Tracks>> getSongsByWords(@PathVariable String limit,
                                                            @PathVariable String... input)
             throws ExecutionException, InterruptedException {
+        log.info("Input: {}", (Object[]) input);
+
         Cloud cloud = new Cloud(
                 Arrays.stream(input)
                         .sequential()
@@ -109,6 +111,8 @@ public class SpController {
 
         wordsTasksResults.forEach(r -> {
             try {
+
+                //TODO check perf vs this & doing get after all have finished
                 result.add(r.get().getBody());
             } catch (InterruptedException | ExecutionException e) {
                 throw new RuntimeException(e);
